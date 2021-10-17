@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="myStudent" class="com.szh.setbao.Student">
+        <property name="name" value="zhangzhang"/>
+        <property name="age" value="22"/>
+
+    </bean>
+    <bean id="myDate" class="java.util.Date">
+        <property name="time" value="31312313"/>
+    </bean>
+
+    <bean id="myFile" class="java.io.File">
+        <constructor-arg name="parent" value="C:\Users\szh\Desktop\瞎整理的笔记"/>
+        <constructor-arg name="child" value="pom.xml"/>
+    </bean>
+
+</beans>

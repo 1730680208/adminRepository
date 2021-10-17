@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+    <bean id="myStudent" class="com.szh.setbaoThree.Student">
+        <constructor-arg name="myname" value="张三"/>
+        <constructor-arg name="myAge" value="22"/>
+        <constructor-arg name="mySchool" ref="school"/>
+    </bean>
+
+
+    <bean id="myStudent2" class="com.szh.setbaoThree.Student">
+        <constructor-arg index="0" value="张三"/>
+        <constructor-arg index="1" value="22"/>
+        <constructor-arg index="2" ref="school"/>
+    </bean>
+
+    <bean id="myStudent3" class="com.szh.setbaoThree.Student">
+        <constructor-arg  value="张三大大"/>
+        <constructor-arg  value="22"/>
+        <constructor-arg  ref="school"/>
+    </bean>
+
+
+    <bean id="school" class="com.szh.setbaoThree.School">
+        <property name="name" value="北大"/>
+        <property name="address" value="王府井"/>
+    </bean>
+
+</beans>

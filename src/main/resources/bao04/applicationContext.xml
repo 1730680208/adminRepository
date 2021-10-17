@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="myStudent" class="com.szh.bao04.Student" autowire="byName">
+        <property name="name" value="张网"/>
+        <property name="age" value="23"/>
+    </bean>
+   <!-- <bean id="school" class="com.szh.bao04.School">
+        <property name="name" value="黑龙江科技大学"/>
+        <property name="address" value="松花江旁边"/>
+    </bean>-->
+
+
+    <bean id="myStudentByClass" class="com.szh.bao04.Student" autowire="byType">
+        <property name="name" value="ByClass"/>
+        <property name="age" value="99"/>
+    </bean>
+
+    <bean id="primarySchool" class="com.szh.bao04.PrimarySchool">
+        <property name="name" value="黑龙江科技xiao学"/>
+        <property name="address" value="松花江旁边"/>
+    </bean>
+
+</beans>
